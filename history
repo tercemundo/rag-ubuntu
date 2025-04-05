@@ -1,0 +1,50 @@
+    1  docker logs open-webui -f
+    2  ls
+    3  history | grep docker
+    4  history | grep docker | less
+    5  ollama -v
+    6  ip a
+    7  ip a | grep 192
+    8  history
+    9  history | less
+   10  ping host.docker.internal
+   11  cat /etc/hosts
+   12  ping host.docker.internal
+   13  eggs produce --clone
+   14  ls
+   15  cd /home/eggs/.
+   16  ls
+   17  du -chs devops_amd64_2025-04-04_0403.iso
+   18  cd .mnt/
+   19  ls
+   20  mv devops_amd64_2025-04-04_0403.iso /tmp/ollama-ubuntu-ui.iso
+   21  chmod 777 /tmp/ollama-ubuntu-ui.iso
+   22  cd ..
+   23  history | grep docker
+   24  docker rm -f ollama-webui
+   25  docker ps
+   26  docker rm -f open-webui
+   27  docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+   28  docker logs -f open-webui
+   29  ls
+   30  cd
+   31  history | less
+   32  exit
+   33  history
+
+  ---
+
+  root@devops:~# cat /etc/hosts
+127.0.0.1       localhost
+127.0.1.1       devops
+172.17.0.1      host.docker.internal
+127.0.0.1       host.docker.internal
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+
+
